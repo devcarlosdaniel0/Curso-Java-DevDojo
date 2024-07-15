@@ -13,7 +13,7 @@ public class FuncionarioTest01 {
         funcionario.valorHora = 48F;
 
         retorno = funcionario.calculaSalario(funcionario);
-        funcionario.dadosFuncionario();
+        funcionario.imprimeDadosFuncionario();
         System.out.println("Salário: " + retorno);
 
         Funcionario funcionario1 = new Funcionario();
@@ -23,7 +23,7 @@ public class FuncionarioTest01 {
         funcionario1.valorHora = 110F;
 
         retorno = funcionario1.calculaSalario(funcionario1);
-        funcionario1.dadosFuncionario();
+        funcionario1.imprimeDadosFuncionario();
         System.out.println("Salário: " + retorno);
     }
 }

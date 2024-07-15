@@ -11,7 +11,7 @@ public class Funcionario {
         return s;
     }
 
-    public void dadosFuncionario() {
+    public void imprimeDadosFuncionario() {
         System.out.println("Nome: " + nome);
         System.out.println("Setor: " + setor);
     }
