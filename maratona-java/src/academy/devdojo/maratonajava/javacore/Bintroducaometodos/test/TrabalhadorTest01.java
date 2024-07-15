@@ -5,10 +5,9 @@ import academy.devdojo.maratonajava.javacore.Bintroducaometodos.dominio.Trabalha
 public class TrabalhadorTest01 {
     public static void main(String[] args) {
         Trabalhador trabalhador = new Trabalhador();
-        trabalhador.nome = "Marcão";
-        trabalhador.idade = 30;
-        trabalhador.salarios = new float[]{1200,943.32f,1454.94f};
-
+        trabalhador.setNome("Marcão");
+        trabalhador.setIdade(30);
+        trabalhador.setSalarios(new float[]{1200,943.32f,1454.94f});
         trabalhador.imprime();
     }
 }
