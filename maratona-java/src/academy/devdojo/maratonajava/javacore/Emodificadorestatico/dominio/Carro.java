@@ -3,7 +3,7 @@ package academy.devdojo.maratonajava.javacore.Emodificadorestatico.dominio;
 public class Carro {
     private String nome;
     private int velocidadeMaxima;
-    public static int velocidadeLimite = 250;
+    private static int velocidadeLimite = 250;
 
     public Carro(String nome, int velocidadeMaxima) {
         this.nome = nome;
@@ -15,6 +15,14 @@ public class Carro {
         System.out.println("Nome: " + this.nome);
         System.out.println("Velocidade máxima: " + this.velocidadeMaxima);
         System.out.println("Velocidade limite: " + Carro.velocidadeLimite);
+    }
+
+    public static void setVelocidadeLimite (int velocidadeLimite) {
+        Carro.velocidadeLimite = velocidadeLimite;
+    }
+
+    public static int getVelocidadeLimite () {
+        return velocidadeLimite;
     }
 
     public String getNome() {
