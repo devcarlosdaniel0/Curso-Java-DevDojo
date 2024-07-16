@@ -3,6 +3,10 @@ package academy.devdojo.maratonajava.javacore.Gheranca.dominio;
 public class Funcionario extends Pessoa {
     private float salario;
 
+    public Funcionario(String nome) {
+        super(nome);
+    }
+
     public void imprime() {
         super.imprime();
         System.out.println(this.salario);
