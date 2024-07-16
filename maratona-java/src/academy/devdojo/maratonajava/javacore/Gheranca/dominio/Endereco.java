@@ -2,7 +2,7 @@ package academy.devdojo.maratonajava.javacore.Gheranca.dominio;
 
 public class Endereco {
     private String rua, cep;
-
+    
     public String getRua() {
         return rua;
     }
