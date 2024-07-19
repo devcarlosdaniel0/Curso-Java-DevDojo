@@ -17,7 +17,7 @@ public class RuntimeExceptionTest04 {
 
         try {
             talvezLanceException();
-        } catch (Exception e) {
+        } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
     }
