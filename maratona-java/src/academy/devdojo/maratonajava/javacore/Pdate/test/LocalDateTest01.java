@@ -17,7 +17,7 @@ public class LocalDateTest01 {
         System.out.println(date.getDayOfWeek());
         System.out.println(date.lengthOfMonth());
         System.out.println(date.isLeapYear());
-        
+
         System.out.println(agora.isLeapYear());
     }
 }
