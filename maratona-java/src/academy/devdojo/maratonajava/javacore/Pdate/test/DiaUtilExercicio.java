@@ -6,22 +6,21 @@ import java.time.LocalDate;
 public class DiaUtilExercicio {
     public static void main(String[] args) {
         // Dado uma determinada data, retorne o próximo dia útil dessa data
-        LocalDate data = LocalDate.of(2024,07,29);
+
+        // Data especificada
+        LocalDate data = LocalDate.of(2024, 7, 26);
         System.out.println("Hoje é " + data.getDayOfWeek());
 
-        System.out.println("O proximo dia útil é " + retornaProximoDiaUtil(data));
+        // Chamada do método para obter o próximo dia útil
+        LocalDate proximoDiaUtil = obterProximoDiaUtil(data);
+        System.out.println("O próximo dia útil é " + proximoDiaUtil.getDayOfWeek() + " (" + proximoDiaUtil + ")");
     }
 
-    public static DayOfWeek retornaProximoDiaUtil(LocalDate diaSemana) {
-        LocalDate diaUtil = null;
-        if (diaSemana.getDayOfWeek().equals(DayOfWeek.FRIDAY)) {
-            diaUtil = diaSemana.plusDays(3);
-        } else if (diaSemana.getDayOfWeek().equals(DayOfWeek.SATURDAY)) {
-            diaUtil = diaSemana.plusDays(2);
-        } else {
-            diaUtil = diaSemana.plusDays(1);
-        }
-
-        return diaUtil.getDayOfWeek();
+    public static LocalDate obterProximoDiaUtil(LocalDate data) {
+        LocalDate proximoDia = data;
+        do {
+            proximoDia = proximoDia.plusDays(1);
+        } while (proximoDia.getDayOfWeek() == DayOfWeek.SATURDAY || proximoDia.getDayOfWeek() == DayOfWeek.SUNDAY);
+        return proximoDia;
     }
 }
