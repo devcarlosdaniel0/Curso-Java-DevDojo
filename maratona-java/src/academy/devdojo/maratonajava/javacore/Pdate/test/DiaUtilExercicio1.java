@@ -8,7 +8,7 @@ public class DiaUtilExercicio1 {
         // Dado uma determinada data, retorne o próximo dia útil dessa data
 
         LocalDate data = LocalDate.of(2024, 7, 26);
-        System.out.println("Hoje é " + data.getDayOfWeek());
+        System.out.println("Hoje é " + data.getDayOfWeek() + " (" + data + ")");
 
         LocalDate proximoDiaUtil = obterProximoDiaUtil(data);
         System.out.println("O próximo dia útil é " + proximoDiaUtil.getDayOfWeek() + " (" + proximoDiaUtil + ")");
