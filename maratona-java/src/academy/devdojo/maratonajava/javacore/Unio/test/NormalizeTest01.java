@@ -3,7 +3,7 @@ package academy.devdojo.maratonajava.javacore.Unio.test;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class PathTest03 {
+public class NormalizeTest01 {
     public static void main(String[] args) {
         String pathDiretorioProjeto = "home/william/dev";
         String pathArquivoTxt = "../../arquivo.txt";
