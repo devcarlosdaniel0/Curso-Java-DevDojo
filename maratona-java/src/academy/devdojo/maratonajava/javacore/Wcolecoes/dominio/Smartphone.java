@@ -18,6 +18,11 @@ public class Smartphone {
         return serialNumber != null && serialNumber.equals(smartphone.serialNumber);
     }
 
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0 : serialNumber.hashCode();
+    }
+
     public String getSerialNumber() {
         return serialNumber;
     }
