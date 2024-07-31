@@ -12,6 +12,7 @@ public class ZipOutputStreamTest01 {
     public static void main(String[] args) {
         Path arquivoZip = Paths.get("pasta/arquivoZip.zip");
         Path arquivosParaZipar = Paths.get("pasta/subpasta1/subsubpasta1");
+        zip(arquivoZip, arquivosParaZipar);
     }
 
     private static void zip(Path arquivoZip, Path arquivosParaZipar) {
