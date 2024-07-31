@@ -1,11 +1,17 @@
 package academy.devdojo.maratonajava.javacore.Vserializacao.dominio;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Aluno implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 2L;
+
     private Long id;
     private String nome;
-    private String password;
+    private transient String password;
+    private static final String NOME_ESCOLA = "DevDojo";
+    private transient Turma turma;
 
     public Aluno(Long id, String nome, String password) {
         this.id = id;
@@ -19,7 +25,17 @@ public class Aluno implements Serializable {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", password='" + password + '\'' +
+                ", NOME_ESCOLA='" + NOME_ESCOLA + '\'' +
+                ", turma='" + turma + '\'' +
                 '}';
+    }
+
+    public Turma getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
     }
 
     public Long getId() {
