@@ -1,7 +1,5 @@
 package academy.devdojo.maratonajava.javacore.Wcolecoes.test;
 
-import academy.devdojo.maratonajava.javacore.Wcolecoes.dominio.Jogos;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

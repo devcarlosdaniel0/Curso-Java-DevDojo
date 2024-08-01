@@ -2,12 +2,12 @@ package academy.devdojo.maratonajava.javacore.Wcolecoes.dominio;
 
 import java.util.Objects;
 
-public class Jogos {
+public class Jogo implements Comparable<Jogo> {
     private Long id;
     private String nome;
     private double preco;
 
-    public Jogos(Long id, String nome, double preco) {
+    public Jogo(Long id, String nome, double preco) {
         Objects.requireNonNull(id, "id não pode ser null");
         Objects.requireNonNull(nome, "nome não pode ser null");
         this.id = id;
@@ -19,7 +19,7 @@ public class Jogos {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Jogos jogos = (Jogos) o;
+        Jogo jogos = (Jogo) o;
         return Double.compare(preco, jogos.preco) == 0 && Objects.equals(id, jogos.id) && Objects.equals(nome, jogos.nome);
     }
 
@@ -59,5 +59,12 @@ public class Jogos {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public int compareTo(Jogo outroJogo) {
+        return Double.compare(this.preco, outroJogo.getPreco());
+//        return this.id.compareTo(outroJogo.getId());
+//        return this.nome.compareTo(outroJogo.getNome());
     }
 }
