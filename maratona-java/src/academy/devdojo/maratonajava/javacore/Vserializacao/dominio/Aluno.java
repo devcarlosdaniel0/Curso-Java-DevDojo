@@ -1,10 +1,8 @@
 package academy.devdojo.maratonajava.javacore.Vserializacao.dominio;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 public class Aluno implements Serializable {
-    @Serial
     private static final long serialVersionUID = 2L;
 
     private Long id;
