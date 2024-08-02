@@ -63,8 +63,8 @@ public class Jogo implements Comparable<Jogo> {
 
     @Override
     public int compareTo(Jogo outroJogo) {
-        return Double.compare(this.preco, outroJogo.getPreco());
-//        return this.id.compareTo(outroJogo.getId());
-//        return this.nome.compareTo(outroJogo.getNome());
+        return this.nome.compareTo(outroJogo.getNome());
+        //return Double.compare(this.preco, outroJogo.getPreco());
+        //return this.id.compareTo(outroJogo.getId());
     }
 }

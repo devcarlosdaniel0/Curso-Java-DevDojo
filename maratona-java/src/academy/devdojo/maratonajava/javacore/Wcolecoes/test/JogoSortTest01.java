@@ -4,7 +4,22 @@ import academy.devdojo.maratonajava.javacore.Wcolecoes.dominio.Jogo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+class JogoByIdComparator implements Comparator<Jogo> {
+    @Override
+    public int compare(Jogo jogo1, Jogo jogo2) {
+        return jogo1.getId().compareTo(jogo2.getId());
+    }
+}
+
+class JogoByPrecoComparator implements Comparator<Jogo> {
+    @Override
+    public int compare(Jogo jogo1, Jogo jogo2) {
+        return Double.compare(jogo1.getPreco(),jogo2.getPreco());
+    }
+}
 
 public class JogoSortTest01 {
     public static void main(String[] args) {
@@ -22,7 +37,18 @@ public class JogoSortTest01 {
 
         Collections.sort(jogos);
         System.out.println();
+        for (Jogo jogo : jogos) {
+            System.out.println(jogo);
+        }
 
+        Collections.sort(jogos, new JogoByIdComparator());
+        System.out.println();
+        for (Jogo jogo : jogos) {
+            System.out.println(jogo);
+        }
+
+        Collections.sort(jogos, new JogoByPrecoComparator());
+        System.out.println();
         for (Jogo jogo : jogos) {
             System.out.println(jogo);
         }
