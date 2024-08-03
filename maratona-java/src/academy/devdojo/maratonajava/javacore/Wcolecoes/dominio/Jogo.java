@@ -25,13 +25,13 @@ public class Jogo implements Comparable<Jogo> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Jogo jogos = (Jogo) o;
-        return Double.compare(preco, jogos.preco) == 0 && Objects.equals(id, jogos.id) && Objects.equals(nome, jogos.nome);
+        Jogo jogo = (Jogo) o;
+        return Objects.equals(id, jogo.id) && Objects.equals(nome, jogo.nome);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome, preco);
+        return Objects.hash(id, nome);
     }
 
     @Override
