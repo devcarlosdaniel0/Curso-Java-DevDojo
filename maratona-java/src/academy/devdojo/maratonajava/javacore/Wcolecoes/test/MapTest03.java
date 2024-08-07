@@ -19,19 +19,18 @@ public class MapTest03 {
         Jogo jogo5 = new Jogo(2L,"Mafia", 2.99D);
         Jogo jogo6 = new Jogo(6L,"Resident Evil", 5.75D);
 
-        List<Jogo> listaConsumidor1 = List.of(jogo1, jogo2, jogo3);
-        List<Jogo> listaConsumidor2 = List.of(jogo4, jogo5, jogo6);
+        List<Jogo> listaJogosDoConsumidor1 = List.of(jogo1, jogo2, jogo3);
+        List<Jogo> listaJogosDoConsumidor2 = List.of(jogo4, jogo5, jogo6);
 
         Map<Consumidor, List<Jogo>> consumidorJogoMap = new HashMap<>();
-        consumidorJogoMap.put(consumidor1, listaConsumidor1);
-        consumidorJogoMap.put(consumidor2, listaConsumidor2);
+        consumidorJogoMap.put(consumidor1, listaJogosDoConsumidor1);
+        consumidorJogoMap.put(consumidor2, listaJogosDoConsumidor2);
 
         for (Map.Entry<Consumidor, List<Jogo>> entry : consumidorJogoMap.entrySet()) {
             System.out.println("----" + entry.getKey().getNome());
             for (Jogo jogo : entry.getValue()) {
                 System.out.println(jogo.getNome());
             }
-
         }
     }
 }
