@@ -25,7 +25,7 @@ public class ComportamentoPorParametroTest03 {
                 new Jogo(5L,"Mortal Kombat",15),
                 new Jogo(3L,"GTA 5",30)
         ));
-        
+
         List<Jogo> jogosFiltrados = filter(jogos, jogo -> jogo.getPreco() < 25);
         System.out.println(jogosFiltrados);
     }
