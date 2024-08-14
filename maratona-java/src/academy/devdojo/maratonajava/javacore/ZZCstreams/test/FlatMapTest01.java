@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class StremTest04 {
+public class FlatMapTest01 {
     public static void main(String[] args) {
         List<List<String>> escola = new ArrayList<>();
         List<String> estudantes = List.of("Cazé", "Nicolas", "Bacchin");
