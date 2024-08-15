@@ -14,5 +14,13 @@ public class ReduceTest01 {
 
         integers.stream().reduce((x, y) -> x * y).ifPresent(System.out::println);
         System.out.println(integers.stream().reduce(1, (x, y) -> x * y));
+
+        System.out.println("-------------");
+
+        integers.stream().reduce((x,y) -> x > y ? x : y).ifPresent(System.out::println);
+        integers.stream().reduce(Integer::max).ifPresent(System.out::println);
+
+        integers.stream().reduce((x,y) -> x < y ? x : y).ifPresent(System.out::println);
+        integers.stream().reduce(Integer::min).ifPresent(System.out::println);
     }
 }
