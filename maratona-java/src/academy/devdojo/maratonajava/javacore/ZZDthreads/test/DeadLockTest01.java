@@ -1,6 +1,6 @@
 package academy.devdojo.maratonajava.javacore.ZZDthreads.test;
 
-public class DeadLock {
+public class DeadLockTest01 {
     public static void main(String[] args) {
         Object lock1 = new Object();
         Object lock2 = new Object();
