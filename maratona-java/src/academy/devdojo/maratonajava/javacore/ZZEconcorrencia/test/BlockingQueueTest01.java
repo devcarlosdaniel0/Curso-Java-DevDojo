@@ -3,7 +3,7 @@ package academy.devdojo.maratonajava.javacore.ZZEconcorrencia.test;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class ArrayBlockingQueueTest01 {
+public class BlockingQueueTest01 {
     public static void main(String[] args) throws InterruptedException {
         BlockingQueue<String> bq = new ArrayBlockingQueue(1);
         bq.put("Carlos");
