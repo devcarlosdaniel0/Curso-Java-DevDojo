@@ -16,7 +16,7 @@ public class CompletableFutureTest01 {
 
     private static void searchPricesSync(StoreService storeService) {
         long start = System.currentTimeMillis();
-        
+
         System.out.println(storeService.getPriceSync("Store 1"));
         System.out.println(storeService.getPriceSync("Store 2"));
         System.out.println(storeService.getPriceSync("Store 3"));
