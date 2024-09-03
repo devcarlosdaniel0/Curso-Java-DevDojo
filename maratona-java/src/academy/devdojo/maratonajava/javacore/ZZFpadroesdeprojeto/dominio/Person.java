@@ -27,7 +27,11 @@ public class Person {
         private String username;
         private String email;
 
-        public PersonBuilder() {
+        private PersonBuilder() {
+        }
+
+        public static PersonBuilder builder() {
+            return new PersonBuilder();
         }
 
         public PersonBuilder firstName(String firstName) {
