@@ -1,7 +1,6 @@
 package academy.devdojo.maratonajava.javacore.ZZGjdbc.test;
 
 import academy.devdojo.maratonajava.javacore.ZZGjdbc.dominio.Producer;
-import academy.devdojo.maratonajava.javacore.ZZGjdbc.repository.ProducerRepository;
 import academy.devdojo.maratonajava.javacore.ZZGjdbc.service.ProducerService;
 import lombok.extern.log4j.Log4j2;
 
