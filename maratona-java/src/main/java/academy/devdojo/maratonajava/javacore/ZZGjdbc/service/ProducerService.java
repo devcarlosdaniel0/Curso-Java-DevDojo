@@ -8,17 +8,25 @@ public class ProducerService {
         ProducerRepository.insert(producer);
     }
 
-    public static void delete(int id) {
-        if (id <= 0) {
-            throw new IllegalArgumentException("Invalid value for id");
-        }
+    public static void delete(Integer id) {
+        requiredValidId(id);
         ProducerRepository.delete(id);
     }
 
-    public static void deleteBetween(int idInicio, int idFinal) {
-        if (idInicio <= 0 || idFinal <= 0) {
-            throw new IllegalArgumentException("Invalid value for ids");
-        }
+    public static void deleteBetween(Integer idInicio, Integer idFinal) {
+        requiredValidId(idInicio);
+        requiredValidId(idFinal);
         ProducerRepository.deleteBetween(idInicio, idFinal);
+    }
+
+    public static void update(Producer producer) {
+        requiredValidId(producer.getId());
+        ProducerRepository.update(producer);
+    }
+
+    private static void requiredValidId(Integer id) {
+        if (id == null || id <= 0) {
+            throw new IllegalArgumentException("Invalid value for id");
+        }
     }
 }
