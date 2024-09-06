@@ -3,6 +3,8 @@ package academy.devdojo.maratonajava.javacore.ZZGjdbc.service;
 import academy.devdojo.maratonajava.javacore.ZZGjdbc.dominio.Producer;
 import academy.devdojo.maratonajava.javacore.ZZGjdbc.repository.ProducerRepository;
 
+import java.util.List;
+
 public class ProducerService {
     public static void insert(Producer producer) {
         ProducerRepository.insert(producer);
@@ -22,6 +24,10 @@ public class ProducerService {
     public static void update(Producer producer) {
         requiredValidId(producer.getId());
         ProducerRepository.update(producer);
+    }
+
+    public static List<Producer> findAll() {
+        return ProducerRepository.findAll();
     }
 
     private static void requiredValidId(Integer id) {
