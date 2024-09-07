@@ -89,7 +89,6 @@ public class ProducerRepository {
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
             ResultSetMetaData rsMetaData = rs.getMetaData();
-            rs.next();
             int columnCount = rsMetaData.getColumnCount();
             log.info("Columns count '{}'", columnCount);
             for (int i = 1; i <= columnCount; i++) {
@@ -97,6 +96,19 @@ public class ProducerRepository {
                 log.info("Column name '{}'", rsMetaData.getColumnName(i));
                 log.info("Column size '{}'", rsMetaData.getColumnDisplaySize(i));
                 log.info("Column type '{}'", rsMetaData.getColumnTypeName(i));
+            }
+        } catch (SQLException e) {
+            log.error("Error while trying to find all producers", e);
+        }
+    }
+
+    public static void showDriverMetaData() {
+        log.info("Showing Driver MetaData");
+        try (Connection conn = ConnectionFactory.getConnection()) {
+            DatabaseMetaData dbMetaData = conn.getMetaData();
+            if (dbMetaData.supportsResultSetType(ResultSet.TYPE_FORWARD_ONLY)) {
+                log.info("Supports TYPE_FORWARD_ONLY");
+                
             }
         } catch (SQLException e) {
             log.error("Error while trying to find all producers", e);
