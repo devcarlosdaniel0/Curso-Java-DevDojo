@@ -1,7 +1,6 @@
 package academy.devdojo.maratonajava.javacore.ZZGjdbc.test;
 
 import academy.devdojo.maratonajava.javacore.ZZGjdbc.dominio.Producer;
-import academy.devdojo.maratonajava.javacore.ZZGjdbc.repository.ProducerRepository;
 import academy.devdojo.maratonajava.javacore.ZZGjdbc.service.ProducerService;
 import lombok.extern.log4j.Log4j2;
 
@@ -26,5 +25,7 @@ public class ConnectionFactoryTest01 {
 //        List<Producer> producers = ProducerService.findByNameAndInsertWhenNotFound("A-1 pictures");
 //        log.info("Producers found '{}'", producers);
 //        ProducerService.findByNameAndDelete("A-1 pictures");
+        List<Producer> producers = ProducerService.findByNamePreparedStatment("bo");
+        log.info("Producers found '{}'", producers);
     }
 }
