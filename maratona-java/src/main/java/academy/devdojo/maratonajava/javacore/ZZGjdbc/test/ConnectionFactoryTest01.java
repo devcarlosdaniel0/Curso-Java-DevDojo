@@ -27,6 +27,8 @@ public class ConnectionFactoryTest01 {
 //        ProducerService.findByNameAndDelete("A-1 pictures");
 //        List<Producer> producers = ProducerService.findByNamePreparedStatment("bo");
 //        log.info("Producers found '{}'", producers);
-        ProducerService.updatePreparedStatement(producerToUpdate);
+//        ProducerService.updatePreparedStatement(producerToUpdate);
+        List<Producer> producers = ProducerService.findByNameCallableStatment("sasa");
+        log.info("Producers found '{}'", producers);
     }
 }
