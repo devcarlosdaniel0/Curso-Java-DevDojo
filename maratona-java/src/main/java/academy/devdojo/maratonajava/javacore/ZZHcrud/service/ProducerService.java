@@ -15,7 +15,6 @@ public class ProducerService {
             case 2 -> delete();
             case 3 -> insert();
             case 4 -> update();
-            default -> throw new IllegalArgumentException("Not a valid option");
         }
     }
 
@@ -44,7 +43,7 @@ public class ProducerService {
     }
 
     private static void update() {
-        System.out.println("Type the id of the object you want to update");
+        System.out.println("Type the id of the producer you want to update");
         Optional<Producer> producerOptional = ProducerRepository.findById(Integer.parseInt(SCANNER.nextLine()));
         if (producerOptional.isEmpty()) {
             System.out.println("Producer not found");
