@@ -24,6 +24,7 @@
     <li>JDBC</li>
     <li>CRUD com banco de dados MYSQL</li>
     <li>Lombok</li>
+    <li>Log4j2</li>
     <li>Testes unitários com JUnit</li>
     <li>Record Class</li>
     <li>Pattern Matching Instanceof</li>
