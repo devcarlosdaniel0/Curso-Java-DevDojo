@@ -23,6 +23,7 @@
     <li>Padrões de projeto (Builder, Factory, Singleton, DTO)</li>
     <li>JDBC</li>
     <li>CRUD com banco de dados MYSQL</li>
+    <li>Lombok</li>
     <li>Testes unitários com JUnit</li>
     <li>Record Class</li>
     <li>Pattern Matching Instanceof</li>
